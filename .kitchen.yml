@@ -1,0 +1,60 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: centos-7.4
+    transport:
+      name: ssh
+    driver:
+      box: bento/centos-7.4
+      network:
+        - ['private_network', {ip: '192.168.58.2'}]
+  - name: trek/Windows2012R2
+    os_type: windows
+    shell_type: powershell
+    communicator: winrm
+    transport:
+      name: winrm
+      username: vagrant
+      password: vagrant
+    driver:
+      box: trek/windows2012r2
+      box_url: https://aztrksaslh00public01.blob.core.windows.net/vagrant/windows/2012r2/windows2012r2min-virtualbox.box
+      network:
+        - ['private_network', {ip: '192.168.58.3'}]
+  - name: mwrock/Windows2016R2
+    os_type: windows
+    shell_type: powershell
+    communicator: winrm
+    transport:
+      name: winrm
+      username: vagrant
+      password: vagrant
+    driver:
+      box: mwrock/Windows2016
+      box_url: https://atlas.hashicorp.com/mwrock/boxes/Windows2016
+      network:
+        - ['private_network', {ip: '192.168.58.4'}]
+
+suites:
+  - name: default
+    run_list:
+      - recipe[cb_dvo_nessusAgent::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:
+      dvo_user:
+        use: "nessus linux"
+        ALM_environment: "local"
+        ALM_service: "nessus"
+      dvo:
+        cloud_service_provider:
+          name: "local"
