@@ -7,7 +7,7 @@ default['dvo_user']['nessus']['binary_sas_key'] = '?sv=2017-04-17&si=cookbook-fi
 # Agent configuration values
 default['dvo_user']['nessus']['host'] = 'cloud.tenable.com'
 default['dvo_user']['nessus']['port'] = '443'
-default['dvo_user']['nessus']['key'] = 'caac0b5e1fdb9b45031b94bf7ea034f85ae8c6a8912b9f1504e183d991f209a0'
+default['dvo_user']['nessus']['key'] = 'e235f3dcd3780f1ee491bc76c18afcae3f6be9a9611e8cfcbfdd7e2d5eec15d2'
 default['dvo_user']['nessus']['agent_group'] = 'DevOps Dev'
 
 # Installation files
