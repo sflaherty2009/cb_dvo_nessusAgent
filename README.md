@@ -20,6 +20,45 @@ There is no how-to. Add this to the run list and the cookbook will take care of 
 ## Dependencies
 None
 
+## Attributes (significant)
+
+### node['dvo_user']['use']
+
+A space delimited set of VM uses.  Anything can be in the list, but it must have one or more of the following:
+* nessus
+* linux
+* windows
+
+This attribute is used for consistency in this cookbook but is not otherwise utilized.
+
+### node['dvo_user']['ALM_environment']
+
+A short representation of the environment used to search for data about other servers in the cluster via the chef server.  For example:
+
+* ss = Shared Services
+* prod = Production
+* e2e = End to End testing environment
+* local = local host testing
+* ...
+
+### Attributes (other)
+
+### node['dvo_user']['nessus']['host]
+
+* Host the agent will connect to.
+
+### node['dvo_user']['nessus']['port']
+
+* Port the agent will connect to on the host.
+
+### node['dvo_user']['nessus']['key']
+
+* Authentication key.
+
+### node['dvo_user']['nessus']['agent_group']
+
+* Group the node will be placed in.
+
 ## Platform-Specific Documentation
 
 ### Windows
