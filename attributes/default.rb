@@ -10,7 +10,7 @@ default['dvo_user']['nessus']['port'] = '443'
 default['dvo_user']['nessus']['key'] = 'e235f3dcd3780f1ee491bc76c18afcae3f6be9a9611e8cfcbfdd7e2d5eec15d2'
 default['dvo_user']['nessus']['agent_group'] = 'DevOps Dev'
 
-default['dvo_user']['nessus']['agent_group'] = "DevOps #{node['dvo_user']['ALM_environment']}" unless node['dvo_user']['ALM_environment'].nil?
+default['dvo_user']['nessus']['agent_group'] = "DevOps #{node['hostname'].split('-')[1]}" 
 
 # Installation files
 default['dvo_user']['nessus']['linux_installer'] = 'NessusAgent-6.11.2-es5.x86_64.rpm'
