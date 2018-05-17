@@ -1,8 +1,7 @@
 {
   "cb_dvo_nessusAgent": {
-    "production": "0.1.1",
-    "testing": "0.1.1",
-    "staging": "0.1.1",
-    "development": "0.1.1"
+    "production": "0.1.3",
+    "testing": "0.1.3",
+    "staging": "0.1.3"
   }
 }

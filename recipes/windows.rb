@@ -11,7 +11,7 @@ remote_file node['dvo_user']['nessus']['windows_installer'] do
   action :create
 end
 
-windows_package 'Nessus Agent' do
+windows_package 'Nessus Agent (x64)' do
   source "#{Chef::Config[:file_cache_path]}/#{node['dvo_user']['nessus']['windows_installer']}"
   options %(NESSUS_NAME=\"#{node['hostname']}\" NESSUS_GROUPS=\"#{node['dvo_user']['nessus']['agent_group']}\" NESSUS_SERVER=\"#{node['dvo_user']['nessus']['host']}:#{node['dvo_user']['nessus']['port']}\" NESSUS_KEY=#{node['dvo_user']['nessus']['key']})
   action :install
