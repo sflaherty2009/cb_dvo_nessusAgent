@@ -59,7 +59,3 @@ This Cookbook has no anti-recipes at this point.
 
 ## Proposed Enhancements
 * NA
-
-## License and Authors
-
-Author:: Matt Oleksowicz (Matthew_Oleksowicz@trekbikes.com) -- Copyright 2017.

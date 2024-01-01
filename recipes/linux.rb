@@ -2,7 +2,7 @@
 # Cookbook:: cb_dvo_nessus
 # Recipe:: linux
 #
-# Copyright (c) 2017 The Trek Bicycle Corporation, Matt Oleksowicz, All Rights Reserved.
+# Copyright (c) 2017 The example Bicycle Corporation, , All Rights Reserved.
 
 remote_file node['dvo_user']['nessus']['linux_installer'] do
   source "#{node['dvo_user']['nessus']['storage_url']}/#{node['dvo_user']['nessus']['linux_installer']}#{node['dvo_user']['nessus']['binary_sas_key']}"

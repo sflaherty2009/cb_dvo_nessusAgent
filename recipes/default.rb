@@ -2,7 +2,7 @@
 # Cookbook:: cb_dvo_nessusAgent
 # Recipe:: default
 #
-# Copyright (c) 2017 The Trek Bicycle Corporation, Matt Oleksowicz, All Rights Reserved.
+# Copyright (c) 2017 The example Bicycle Corporation, , All Rights Reserved.
 
 case node['os']
 when 'linux'

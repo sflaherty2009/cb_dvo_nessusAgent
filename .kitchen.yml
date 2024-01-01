@@ -16,7 +16,7 @@ platforms:
       box: bento/centos-7.4
       network:
         - ['private_network', {ip: '192.168.58.2'}]
-  - name: trek/Windows2012R2
+  - name: example/Windows2012R2
     os_type: windows
     shell_type: powershell
     communicator: winrm
@@ -25,11 +25,11 @@ platforms:
       username: vagrant
       password: vagrant
     driver:
-      box: trek/windows2012r2
+      box: example/windows2012r2
       box_url: https://aztrksaslh00public01.blob.core.windows.net/vagrant/windows/2012r2/windows2012r2min-virtualbox.box
       network:
         - ['private_network', {ip: '192.168.58.3'}]
-  - name: trek/Windows2016R2
+  - name: example/Windows2016R2
     os_type: windows
     shell_type: powershell
     communicator: winrm
@@ -39,7 +39,7 @@ platforms:
       password: vagrant
     driver:
     driver:
-      box: trek/Windows2016
+      box: example/Windows2016
       box_url: https://aztrksaslh00public01.blob.core.windows.net/vagrant/windows/2016/windows2016min-virtualbox.box
       network:
         - ['private_network', {ip: '192.168.58.4'}]
